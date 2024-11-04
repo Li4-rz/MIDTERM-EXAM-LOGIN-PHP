@@ -41,7 +41,7 @@
 
     if (isset($_POST['insertNewProjectBtn'])) {
 
-        $query = insertProject($pdo, $_POST['project_name'], $_POST['technologiesUsed'], $_GET['web_dev_id']);
+        $query = insertProject($pdo, $_POST['projectName'], $_POST['technologiesUsed'], $_GET['web_dev_id']);
 
         if ($query) {
             header("Location: ../viewprojects.php?web_dev_id=" . $_GET['web_dev_id']);
