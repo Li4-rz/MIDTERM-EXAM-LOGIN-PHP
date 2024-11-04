@@ -94,6 +94,13 @@
             border-radius: 5px;
             margin-bottom: 20px;
             width: 100%;
+	    animation: fadeOut 5s forwards;
+        }
+
+	@keyframes fadeOut {
+            0% { opacity: 1; }
+            80% { opacity: 1; } 
+            100% { opacity: 0; }
         }
 
         .no-user {
@@ -142,6 +149,14 @@
             color: #388E3C;
         }
     </style>
+    <script>
+        setTimeout(() => {
+            const messageElement =document.querySelector('.message');
+            if (messageElement) {
+                messageElement.style.display = 'none';
+            }
+        }, 5000);
+    </script>
 </head>
 <body>
     <h1>Welcome to Web Dev Projects Management System. Add new Web Devs!</h1>
